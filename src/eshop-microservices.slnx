@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/BuidingBlocks/">
-    <Project Path="BuildingBlocks/BuildingBlocs/BuildingBlocs.csproj" Id="88bf2be6-967a-4d52-a16a-04f1faa232a8" />
+    <Project Path="BuildingBlocks/BuildingBlocs/BuildingBlocks.csproj" Id="88bf2be6-967a-4d52-a16a-04f1faa232a8" />
   </Folder>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Catalog/">

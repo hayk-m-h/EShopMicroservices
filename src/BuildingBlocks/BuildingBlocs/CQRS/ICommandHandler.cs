@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BuildingBlocs.CQRS;
+namespace BuildingBlocks.CQRS;
 
 internal interface ICommandHandler<in TCommand>
     : IRequestHandler<TCommand, Unit>

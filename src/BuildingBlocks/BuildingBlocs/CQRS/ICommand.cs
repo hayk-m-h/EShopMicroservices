@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BuildingBlocs.CQRS;
+namespace BuildingBlocks.CQRS;
 
 public interface ICommand : IRequest<Unit>;
 
