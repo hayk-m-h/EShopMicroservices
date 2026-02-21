@@ -1,0 +1,19 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+GET https://localhost:5050/products
+
+###
+
+POST https://localhost:5050/products
+Content-Type: application/json
+Accept-Language: en-US,en;q=0.5
+
+{
+	"name": "new product C",
+  "Category": ["c1", "c2"],
+  "description":"Description product C",
+  "imageFile":"ImageFile product C",
+  "Price":199    
+}
+
+###

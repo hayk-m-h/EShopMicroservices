@@ -1,5 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddOpenApi();
 builder.Services.AddCarter();
 builder.Services.AddMediatR( configuration =>
 {
