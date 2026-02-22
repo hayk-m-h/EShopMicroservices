@@ -4,10 +4,24 @@ public record CreateProductCommad(string Name, List<string> Category, string Des
     : ICommand<CreateProductResult>;
 public record CreateProductResult(Guid Id);
 
-internal class CreateProductCommandHandler(IDocumentSession _session) : ICommandHandler<CreateProductCommad, CreateProductResult>
+public class CreateProductCommandValidator : AbstractValidator<CreateProductCommad>
+{
+    public CreateProductCommandValidator()
+    {
+        RuleFor(x => x.Name).NotEmpty().WithMessage("{PropertyName} is required.");
+        RuleFor(x => x.Category).NotEmpty().WithMessage("{PropertyName} is required.");
+        RuleFor(x => x.ImageFile).MaximumLength(200).WithMessage("{PropertyName} is required.");
+        RuleFor(x => x.Price).GreaterThan(0).WithMessage("{PropertyName} must be greater then 0.");
+    }
+}
+
+internal class CreateProductCommandHandler
+    (IDocumentSession _session, ILogger<CreateProductCommandHandler> _logger) 
+    : ICommandHandler<CreateProductCommad, CreateProductResult>
 {
     public async Task<CreateProductResult> Handle(CreateProductCommad commad, CancellationToken cancellationToken)
     {
+        _logger.LogInformation("Handling CreateProductCommad for Product Name: {ProductName}", commad.Name);
 
         var product = new Product
         {
