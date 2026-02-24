@@ -20,4 +20,13 @@
       <Folder Include="Protos\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\BuildingBlocks\BuildingBlocs\BuildingBlocks.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Carter" Version="10.0.0" />
+      <PackageReference Include="Marten" Version="8.22.0" />
+    </ItemGroup>
+
 </Project>
