@@ -1,0 +1,58 @@
+﻿###
+GRPC localhost:5002/greet.Greeter/SayHello
+
+{
+  "name": ".net"
+}
+
+###
+GRPC https://localhost:5002/greet.Greeter/SayHello
+
+{
+  "name": ".net"
+}
+
+
+
+###
+GET https://localhost:5052/
+
+###
+GET https://localhost:6062/
+
+###
+GRPC {{discount_url}}/discount.DiscountProtoService/CreateDiscount
+
+{
+  "coupon": {
+      "productName": "new phone",
+      "description": "Description for a new phone",
+      "amount": 150
+  }
+}
+
+###
+GRPC {{discount_url}}/discount.DiscountProtoService/UpdateDiscount
+
+{
+  "coupon": {
+    "id": 9,
+    "productName": "new phone",
+    "description": "new Description for a new phone",
+    "amount": 200
+  }
+}
+
+###
+GRPC {{discount_url}}/discount.DiscountProtoService/DeleteDiscount
+
+{
+  "productName": "new phone"
+}
+
+###
+GRPC localhost:6002/discount.DiscountProtoService/GetDiscount
+
+{
+  "productName": "new phone"
+}
