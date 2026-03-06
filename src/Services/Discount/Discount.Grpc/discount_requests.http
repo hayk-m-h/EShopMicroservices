@@ -43,16 +43,23 @@ GRPC {{discount_url}}/discount.DiscountProtoService/UpdateDiscount
   }
 }
 
-###
+### Delete
 GRPC {{discount_url}}/discount.DiscountProtoService/DeleteDiscount
+
+{
+  "productName": "IPhone X"
+}
+
+### Get
+GRPC localhost:6002/discount.DiscountProtoService/GetDiscount
 
 {
   "productName": "new phone"
 }
 
-###
-GRPC localhost:6002/discount.DiscountProtoService/GetDiscount
+### Get
+GRPC {{discount_url}}/discount.DiscountProtoService/GetDiscount
 
 {
-  "productName": "new phone"
+  "productName": "IPhone X"
 }
