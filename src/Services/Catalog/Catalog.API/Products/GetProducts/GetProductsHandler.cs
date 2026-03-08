@@ -10,7 +10,7 @@ public class GetProductsQueryHandler
 {
     public async Task<GetProductsResult> Handle(GetProductsQuery query, CancellationToken cancellationToken)
     {
-        IEnumerable <Product> result = null;
+        IEnumerable<Product>? result = null;
 
         if (query.PageSize == null)
         {
