@@ -15,7 +15,7 @@ services:
     - "--mode=server"
     - "--frontend-port=57000"
     - "--backend-port=57200"
-    - "--roslyn-worker-port=57421"
+    - "--roslyn-worker-port=57403"
     - "--timeout=60"
     environment:
       DOTNET_USE_POLLING_FILE_WATCHER: "true"
@@ -23,9 +23,9 @@ services:
       RESHARPER_LOG_CONF: "/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
     image: "basketapi:dev"
     ports:
-    - "127.0.0.1:64382:57000"
-    - "127.0.0.1:57221:57200"
-    - "127.0.0.1:57421:57421"
+    - "127.0.0.1:57003:57000"
+    - "127.0.0.1:57203:57200"
+    - "127.0.0.1:57403:57403"
     volumes:
     - "C:\\Users\\sun\\source\\repos\\EShopMicroservices\\src\\Services\\Basket\\\
       Basket.API:/app:rw"
@@ -35,7 +35,7 @@ services:
       Linux64:/opt/JetBrains/RiderDebuggerTools"
     - "C:\\Users\\sun\\AppData\\Local\\Programs\\Rider\\bin\\backend-log.xml:/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
     - "C:\\Users\\sun\\AppData\\Local\\JetBrains\\Rider2025.3\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2026_3_06_18_23_40:/var/opt/JetBrains/RiderDebuggerTools:rw"
+      JetBrains.Debugger.Worker.2026_3_24_17_53_03:/var/opt/JetBrains/RiderDebuggerTools:rw"
     working_dir: "/app"
   catalog.api:
     build:
@@ -52,7 +52,7 @@ services:
     - "--mode=server"
     - "--frontend-port=57000"
     - "--backend-port=57200"
-    - "--roslyn-worker-port=57422"
+    - "--roslyn-worker-port=57404"
     - "--timeout=60"
     environment:
       DOTNET_USE_POLLING_FILE_WATCHER: "true"
@@ -60,9 +60,9 @@ services:
       RESHARPER_LOG_CONF: "/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
     image: "catalogapi:dev"
     ports:
-    - "127.0.0.1:64383:57000"
-    - "127.0.0.1:57222:57200"
-    - "127.0.0.1:57422:57422"
+    - "127.0.0.1:57004:57000"
+    - "127.0.0.1:57204:57200"
+    - "127.0.0.1:57404:57404"
     volumes:
     - "C:\\Users\\sun\\source\\repos\\EShopMicroservices\\src\\Services\\Catalog\\\
       Catalog.API:/app:rw"
@@ -72,7 +72,7 @@ services:
       Linux64:/opt/JetBrains/RiderDebuggerTools"
     - "C:\\Users\\sun\\AppData\\Local\\Programs\\Rider\\bin\\backend-log.xml:/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
     - "C:\\Users\\sun\\AppData\\Local\\JetBrains\\Rider2025.3\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2026_3_06_18_23_40:/var/opt/JetBrains/RiderDebuggerTools:rw"
+      JetBrains.Debugger.Worker.2026_3_24_17_53_03:/var/opt/JetBrains/RiderDebuggerTools:rw"
     working_dir: "/app"
   discount.grpc:
     build:
@@ -89,7 +89,7 @@ services:
     - "--mode=server"
     - "--frontend-port=57000"
     - "--backend-port=57200"
-    - "--roslyn-worker-port=57423"
+    - "--roslyn-worker-port=57405"
     - "--timeout=60"
     environment:
       DOTNET_USE_POLLING_FILE_WATCHER: "true"
@@ -97,9 +97,9 @@ services:
       RESHARPER_LOG_CONF: "/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
     image: "discountgrpc:dev"
     ports:
-    - "127.0.0.1:64384:57000"
-    - "127.0.0.1:57223:57200"
-    - "127.0.0.1:57423:57423"
+    - "127.0.0.1:57005:57000"
+    - "127.0.0.1:57205:57200"
+    - "127.0.0.1:57405:57405"
     volumes:
     - "C:\\Users\\sun\\source\\repos\\EShopMicroservices\\src\\Services\\Discount\\\
       Discount.Grpc:/app:rw"
@@ -109,5 +109,5 @@ services:
       Linux64:/opt/JetBrains/RiderDebuggerTools"
     - "C:\\Users\\sun\\AppData\\Local\\Programs\\Rider\\bin\\backend-log.xml:/etc/opt/JetBrains/RiderDebuggerTools/backend-log.xml"
     - "C:\\Users\\sun\\AppData\\Local\\JetBrains\\Rider2025.3\\log\\DebuggerWorker\\\
-      JetBrains.Debugger.Worker.2026_3_06_18_23_40:/var/opt/JetBrains/RiderDebuggerTools:rw"
+      JetBrains.Debugger.Worker.2026_3_24_17_53_03:/var/opt/JetBrains/RiderDebuggerTools:rw"
     working_dir: "/app"
